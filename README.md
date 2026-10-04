@@ -2,7 +2,7 @@
 This is a small little fun sandbox game I created in C++. To compile it, you need libdragon to compile n64 libraries
 
 (Clone the library and complete installation steps from their github page)
-git clone https://github.com ~/libdragon-source
+git clone https://github.com/DragonMinded/libdragon.git
 
 (Set up environment variables)
 echo 'export N64_INST=/opt/libdragon' >> ~/.bashrc
