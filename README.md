@@ -1,5 +1,5 @@
 # Ball-sandbox-n64
-This is a small little fun sandbox game I created in C++. To compile it, you need libdragon to compile n64 libraries
+This is a small little fun sandbox game I created in C++ and originally ported from the Windows XP version I targeted. To compile it, you need libdragon to compile n64 libraries
 
 (Clone the library and complete installation steps from their github page)
 
