@@ -1,43 +1,34 @@
-# Ball-sandbox-n64
-This is a small little fun sandbox game I created in C++ and originally ported from the Windows XP version I targeted. To compile it, you need libdragon to compile n64 libraries
+# Ball Sandbox N64
 
-(Clone the library and complete installation steps from their github page)
+A tiny fun physics sandbox for the Nintendo 64. Move a cursor around the screen, hold **A**, and spawn bouncing balls. Watch them pile up.
 
-git clone https://github.com/DragonMinded/libdragon.git
+Originally ported from a Windows XP version I made — now running on real N64 hardware (or an emulator) via libdragon.
 
-(Set up environment variables)
+## Controls
 
+- **Analog stick** — move cursor
+- **Hold A** — spawn balls
 
-echo 'export N64_INST=/opt/libdragon' >> ~/.bashrc
+Up to 900 balls at 320x240 with simple gravity and collision physics.
 
-echo 'export PATH=$PATH:$N64_INST/bin' >> ~/.bashrc
+## Requirements
 
-source ~/.bashrc
+- libdragon toolchain: https://github.com/DragonMinded/libdragon
+- `N64_INST` environment variable pointing at your libdragon install
 
-(build tool-chain and compile libraries)
+## Build
 
-sudo mkdir -p /opt/libdragon
+```bash
+# if you haven't set these yet
+export N64_INST=/opt/libdragon
+export PATH=$PATH:$N64_INST/bin
 
-sudo chown -R $(whoami) /opt/libdragon
-
-cd ~/libdragon-source
-
-./tools/build-toolchain.sh
-
-(Finish and compile)
-
+cd N64
 make
+```
 
-make install
+This produces `ball_physics.z64`, which you can run on an emulator or flash cart.
 
-(Install using git clone)
+## Notes
 
-git clone https://github.com/jaw201106/Ball-sandbox-n64.git
-
-(open folder and compile assuming libdragon went accordingly)
-
-echo 'export N64_INST=/opt/libdragon' >> ~/.bashrc
-
-echo 'export PATH=$PATH:$N64_INST/bin' >> ~/.bashrc
-
-make
+See libdragon's repo for full toolchain setup instructions if you're starting from scratch.
